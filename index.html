@@ -36,7 +36,15 @@
 				<!-- Footer -->
 					<footer id="footer">
 					    <p class="copyright">
-					    2020-2024<br>
+					    2020-2024 © <span id="days" style="font-weight:800; color:#ED712E;"></span>
+						<script>
+							let s1 = '2020-6-20';//设置为你的建站时间
+							s1 = new Date(s1.replace(/-/g, "/"));
+							s2 = new Date();
+							let days = s2.getTime() - s1.getTime();
+							let number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+							document.getElementById('days').innerHTML = number_of_days;
+						</script><br>
 					    YESI All Rights Reserved.<br>
 						<p class="copyright"><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">京ICP备2020043363号</a><br>
 						<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802032588" target="_blank">京网公安备11010802032588号</a>
